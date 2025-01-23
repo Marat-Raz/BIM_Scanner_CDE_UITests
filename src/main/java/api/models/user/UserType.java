@@ -1,4 +1,4 @@
-package models.user;
+package api.models.user;
 
 public enum UserType {
   DEFAULT_USER,

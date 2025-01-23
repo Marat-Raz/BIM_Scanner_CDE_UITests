@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.given;
 import api.base.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import models.token.RequestToken;
+import api.models.token.RequestToken;
 
 public class TokenClient extends Client {
   private static final String TOKEN = "connect/token";

@@ -1,4 +1,4 @@
-package models.user;
+package api.models.user;
 
 import static org.passay.CharacterCharacteristicsRule.ERROR_CODE;
 

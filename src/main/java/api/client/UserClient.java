@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.given;
 import api.base.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import models.user.User;
+import api.models.user.User;
 
 public class UserClient extends Client {
 

@@ -1,4 +1,4 @@
-package models.token;
+package api.models.token;
 
 import lombok.*;
 

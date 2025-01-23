@@ -1,4 +1,4 @@
-package models.user;
+package api.models.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

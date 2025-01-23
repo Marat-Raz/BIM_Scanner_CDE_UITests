@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="UI tests for BIM Scanner CDE" parallel="methods" thread-count="3" data-provider-thread-count="3">
-  <test name="smoke UI tests">
+  <test name="Full UI tests">
     <classes>
       <class name="LoginTests" />
     </classes>

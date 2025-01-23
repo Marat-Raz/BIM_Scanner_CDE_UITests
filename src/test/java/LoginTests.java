@@ -16,6 +16,7 @@ public class LoginTests extends StartTests {
     app.loginPage.open();
     app.loginPage.loginWithSignInButton(defaultUser.getUserName(), defaultUser.getPassword());
     app.projectsPage.addProjectButton.shouldBe(visible);
+
   }
 
 

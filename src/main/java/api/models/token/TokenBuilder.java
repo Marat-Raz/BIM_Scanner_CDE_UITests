@@ -1,8 +1,8 @@
-package models.token;
+package api.models.token;
 
 import lombok.Getter;
 import lombok.Setter;
-import models.user.User;
+import api.models.user.User;
 
 @Getter
 @Setter

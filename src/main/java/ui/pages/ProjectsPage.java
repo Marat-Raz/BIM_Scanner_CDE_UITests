@@ -1,5 +1,7 @@
 package ui.pages;
 
+
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.SelenideElement;
@@ -16,4 +18,7 @@ public class ProjectsPage extends BasePage {
   public SelenideElement addProjectButton =
       $(By.xpath("//span[text()='Создать проект']")); // todo сделать независимым от локализации
 
+  public void waitForLoadProjectsPage() {
+    pageTitle.shouldBe(visible);
+  }
 }
