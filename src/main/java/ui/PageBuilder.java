@@ -12,4 +12,5 @@ public class PageBuilder {
   static ProjectsPage buildProjectsPage() {
     return new ProjectsPage("https://bimscannercde.frontend.test.briodev.ru");
   }
+
 }
