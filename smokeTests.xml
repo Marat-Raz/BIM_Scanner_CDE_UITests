@@ -3,6 +3,7 @@
 
 <suite name="UI tests for BIM Scanner CDE" parallel="classes" thread-count="3" data-provider-thread-count="3">
   <test name="smoke UI tests">
+    // todo изменить
     <groups>
       <run>
         <include name="smoke" />

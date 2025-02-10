@@ -35,31 +35,25 @@ public class StartTests {
       + "получение токена пользователя admin для запросов, требующих прав админа, \n")
   public void globalSetUp() {
     SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    RestAssured.filters(
-        new RequestLoggingFilter(), new ResponseLoggingFilter(),
+    RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter(),
         new AllureRestAssured());
     app = new App();
-    ValidatableResponse responseAdminToken =
-        tokenClient.createToken(TokenBuilder.getTokenForAdminUser());
+    ValidatableResponse responseAdminToken = tokenClient.createToken(
+        TokenBuilder.getTokenForAdminUser());
     Client.ADMIN_ACCESS_TOKEN = responseAdminToken.extract().path("access_token");
   }
 
-  // todo создавать и удалять пользователей в каждом тесте
   @BeforeMethod
   @Step("Создание пользователя")
   public void createUser() {
     defaultUser = userFactory.createUser(DEFAULT_USER);
     baseResponse = userClient.createUser(defaultUser);
     userId = baseResponse.extract().path("id");
-/*    ValidatableResponse responseToken =
-        tokenClient.createToken(TokenBuilder.getTokenForUser(defaultUser));
-    Client.DEFAULT_USER_ACCESS_TOKEN = responseToken.extract().path("access_token");*/
-    // todo выдать для user права на создание проектов раздел permission
   }
 
   @AfterMethod
-  @Step("Удаление пользователя")
-  public void deleteUser() {
+  @Step("Удаление пользователя, очитка браузера")
+  public void cleanData() {
     Selenide.clearBrowserCookies();
     Selenide.clearBrowserLocalStorage();
     userClient.deleteUser(userId);

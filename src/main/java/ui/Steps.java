@@ -30,10 +30,5 @@ public class Steps {
     return listString;
   }
 
-  public static void main(String[] args) {
-    ArrayList<String> list = generateTestDataOnBoundariesByCharacterCount(0, 10);
-    System.out.println(list);
-  }
-
 
 }

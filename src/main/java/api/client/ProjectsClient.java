@@ -5,8 +5,8 @@ import static io.restassured.RestAssured.given;
 import api.base.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import models.project.Project;
-import models.project.ProjectWithConcurrencyStamp;
+import api.models.project.Project;
+import api.models.project.ProjectWithConcurrencyStamp;
 
 public class ProjectsClient extends Client {
   private static final String PROJECTS = "api/projects/";
