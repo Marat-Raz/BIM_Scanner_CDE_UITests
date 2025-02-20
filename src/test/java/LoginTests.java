@@ -1,5 +1,6 @@
 import static com.codeborne.selenide.Condition.visible;
 
+import base.StartTests;
 import org.testng.annotations.Test;
 
 public class LoginTests extends StartTests {
