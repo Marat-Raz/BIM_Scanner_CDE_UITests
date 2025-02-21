@@ -9,15 +9,15 @@ import com.codeborne.selenide.SelenideElement;
 public interface NavigationBar extends LanguageAndThemeBtn {
 
   // todo поменять все локаторы после переименования разработчиками
-  public SelenideElement boardLink = $x("//a[contains(@href, 'board')]");
-  public SelenideElement tasksLink = $x(
+  SelenideElement boardLink = $x("//a[contains(@href, 'board')]");
+  SelenideElement tasksLink = $x(
       "//*[text() = 'Задачи']"); // таких элементов много может быть
-  public SelenideElement statisticsLink = $x("//a[contains(@href, 'statistics')]");
-  public SelenideElement modelsLink = $x("//a[contains(@href, 'models')]");
-  public SelenideElement membersLink = $x("//a[contains(@href, 'members')]");
-  public SelenideElement libraryLink = $x("//a[contains(@href, 'library')]");
-  public SelenideElement templatesLink = $x("//a[contains(@href, 'templates')]");
-  public SelenideElement collapseBtn = $("button[class*='my-4']");
+  SelenideElement statisticsLink = $x("//a[contains(@href, 'statistics')]");
+  SelenideElement modelsLink = $x("//a[contains(@href, 'models')]");
+  SelenideElement membersLink = $x("//a[contains(@href, 'members')]");
+  SelenideElement libraryLink = $x("//a[contains(@href, 'library')]");
+  SelenideElement templatesLink = $x("//a[contains(@href, 'templates')]");
+  SelenideElement collapseBtn = $("button[class*='my-4']");
 
   default BoardPage clickOnBoardLink() {
     boardLink.click();

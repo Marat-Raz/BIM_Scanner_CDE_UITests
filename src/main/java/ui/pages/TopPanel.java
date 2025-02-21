@@ -1,7 +1,6 @@
 package ui.pages;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
@@ -12,11 +11,11 @@ import com.codeborne.selenide.SelenideElement;
 public interface TopPanel extends LanguageAndThemeBtn {
 
   // todo поменять все локаторы после переименования разработчиками
-  public SelenideElement bimScannerBtn = $x("//a[@href='/']");
-  public SelenideElement themeToggleLight = $("button[data-testid='theme-toggle-light']");
-  public SelenideElement themeToggleDark = $("button[data-testid='theme-toggle-dark']");
-  public SelenideElement divReactSelectOption = $(byText("амфук"));
-  public SelenideElement projectDropDown =
+  SelenideElement bimScannerBtn = $x("//a[@href='/']");
+  SelenideElement themeToggleLight = $("button[data-testid='theme-toggle-light']");
+  SelenideElement themeToggleDark = $("button[data-testid='theme-toggle-dark']");
+  // todo для поиска проекта по тексту: SelenideElement divReactSelectOption = $(byText("амфук"));
+  SelenideElement projectDropDown =
       $("div[class='flex items-center justify-between'] .p-2");
 
   default ProjectsPage clickOnBimScanner() {

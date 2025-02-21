@@ -1,12 +1,30 @@
 package ui;
 
-import java.util.*;
+import static com.codeborne.selenide.Condition.enabled;
+
+import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Steps {
 
-  public void clickOnBtn() {
+  @Step("Нажать на элемент")
+  public void clickOnElement(SelenideElement locator) {
+    locator.scrollTo();
+    locator.shouldBe(enabled).click();
+  }
 
+  @Step("Клик правой кнопки мышки на элемент")
+  public void clickRightButtonMouse(SelenideElement locator) {
+    locator.shouldBe(enabled).contextClick();
+  }
+
+  @Step("Ввод текстового поля")
+  public void inputField(SelenideElement locator, String str) {
+    locator.hover().shouldBe(enabled).setValue(str);
   }
 
   public static ArrayList<String> generateTestDataOnBoundariesByCharacterCount(int begin, int end) {
